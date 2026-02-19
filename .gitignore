@@ -1,0 +1,9 @@
+runs/
+*.exe
+*.out
+*.test
+coverage/
+tmp/
+*.log
+weak-policy.json
+

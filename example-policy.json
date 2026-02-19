@@ -1,0 +1,30 @@
+{
+  "max_risk_score": 70,
+  "approval_risk_threshold": 30,
+  "high_risk_requires_approval": true,
+  "blocked_tools": [
+    "shell.exec",
+    "filesystem.read_secret",
+    "credentials.export"
+  ],
+  "sensitive_tools": [
+    "shell.exec",
+    "http.request",
+    "filesystem.read",
+    "filesystem.write",
+    "database.query"
+  ],
+  "blocked_arg_patterns": [
+    "(?i)api[_-]?key",
+    "(?i)\\btoken\\b",
+    "(?i)\\bpassword\\b",
+    "(?i)\\bsecret\\b",
+    "(?i)\\.env",
+    "(?i)id_rsa"
+  ],
+  "trusted_sources": [
+    "system",
+    "developer",
+    "policy-engine"
+  ]
+}
